@@ -37,4 +37,29 @@ public class Time {
                 ", sec=" + sec +
                 '}';
     }
+
+    public void setTime(int hour, int min, int sec) {
+        setHour(hour);
+        setMin(min);
+        setSec(sec);
+    }
+
+    private String checkPmAm() {
+        if (hour<12) {
+            return " am";
+        }
+        else if (hour == 12) {
+            setHour(1);
+            return " pm";
+        }
+        else {
+            setHour(hour - 12);
+            return " pm";
+        }
+    }
+
+    public void displayTime() {
+        String ba = checkPmAm();
+        System.out.println(hour + ":" + min + ":" + sec + ba);
+    }
 }
