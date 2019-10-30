@@ -9,6 +9,5 @@ public class Main {
 		System.out.println("From: " + f1.getArAirport());
 		System.out.println("To: " + f1.getDepAirport());
 		System.out.println(f1);
-		String PushForGitHub;
 	}
 }
